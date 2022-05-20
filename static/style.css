@@ -1,4 +1,4 @@
-*{
+/* *{
 	margin: 0;
 	padding:0;
 }
@@ -51,7 +51,6 @@ body{
     width:75%;
     height:60%;
     top:-5em;
-    /*border:1px solid red;*/
     position: relative;
     left:20%;
     text-align: justify;
@@ -79,4 +78,4 @@ body{
 	color:green;
 	font-size:20px;
 	font-weight: bold;
-}
+} */
