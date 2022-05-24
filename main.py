@@ -1,8 +1,8 @@
-from flask import Flask, render_template
+
+from flask import Flask, render_template, request
 from CPT import *
 model = CPT()
 data = model.load_files("./data/train.csv")
-
 
 # intialize Flask
 app = Flask(__name__)
@@ -24,6 +24,24 @@ def index():
 @app.route('/home')
 def homepage():
     return render_template('home.html')
+
+
+@app.route('/train')
+def train():
+    model.train(data)
+    return render_template('trainresult.html')
+
+
+@app.route('/predict', methods=['GET', 'POST'])
+def predict():
+    if request.method == 'POST':
+        print(request.form)
+    return render_template('trainresult.html')
+
+
+def predictResult(target, num_predictions=1):
+    predictions = model.predict(data, [target], 5, n=num_predictions)
+    return render_template('predictresult.html', predictions=predictions)
 
 
 if __name__ == '__main__':

@@ -1,0 +1,27 @@
+{% extends 'layout.html' %} {% block body %}
+<div class="container">
+  <div
+    class="card"
+    style="
+      background: linear-gradient(to right, #ffffffbd, #ffffffc7),
+        url(https://miro.medium.com/max/1135/1*cwEeGqeSP5h5MXFm67lD3w.png);
+      padding: 10rem 0;
+    "
+  >
+    <div class="card-body">
+      <p class="display-2 my-5 text-center fw-bold text-success">
+        Model Successfully Trained!!
+      </p>
+
+      <div class="row justify-content-center">
+        <div class="col-sm-4">
+          <a href="" class="btn btn-danger">Test CPT Model</a>
+        </div>
+        <div class="col-sm-4">
+          <a href="" class="btn btn-danger">Predict Sequence using CPT Model</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
