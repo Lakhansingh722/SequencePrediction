@@ -12,7 +12,7 @@ def train(CPTmodel):
     return CPTmodel.train()
 
 
-def predictSequence(data, target, k, r):
+def predictSequence(data, target, r, k=5):
     return model.predict(data, [target], k, r)
 
 
@@ -33,14 +33,25 @@ def train():
 
 
 @app.route('/predict', methods=['GET', 'POST'])
-def predict():
+def predictResult():
+    if request.method == 'POST':
+        print(request.form)
+        seqToPredict = list(map(int, request.form.values()))
+        print(seqToPredict)
+        result = predictSequence(data, seqToPredict, 3)
+        return render_template('predictersult.html', result=result)
+    return render_template('predict.html')
+
+
+@app.route('/test', methods=['GET', 'POST'])
+def trainResult():
     if request.method == 'POST':
         print(request.form)
     return render_template('trainresult.html')
 
 
-def predictResult(target, num_predictions=1):
-    predictions = model.predict(data, [target], 5, n=num_predictions)
+def predictSeq(target, num_predictions=1):
+    predictions = model.predict(data, target, 5, n=num_predictions)
     return render_template('predictresult.html', predictions=predictions)
 
 

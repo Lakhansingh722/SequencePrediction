@@ -1,332 +1,431 @@
-{% extends 'layout.html' %}
+{% extends 'layout.html' %} {% block body %}
 
+<!-- ======= Header ======= -->
 
+<section id="hero">
+  <div class="hero-container">
+    <div
+      id="heroCarousel"
+      data-bs-interval="5000"
+      class="carousel slide carousel-fade"
+      data-bs-ride="carousel"
+    >
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
 
-{% block body %}
-    <!-- ======= Top Bar ======= -->
-    <section id="topbar" class="d-flex align-items-center">
-      <div class="container d-flex justify-content-center justify-content-md-between">
-        <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:Sequencepridiction@gmail.com">Sequencepridiction@gmail.com</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91 5589 55488 55</span></i>
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide 1 -->
+        <div
+          class="carousel-item active"
+          style="background-image: url(../static/assets/img/slide/slide-1.jpg)"
+        >
+          <div class="carousel-container">
+            <div class="carousel-content">
+              <h2 class="animate__animated animate__fadeInDown">
+                <span>Sequence Prediction</span>
+              </h2>
+              <p class="animate__animated animate__fadeInUp"></p>
+              <a
+                href=""
+                class="btn-get-started animate__animated animate__fadeInUp"
+                >Read More</a
+              >
+            </div>
+          </div>
         </div>
-        <div class="social-links d-none d-md-flex align-items-center">
-          <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+
+        <!-- Slide 2 -->
+        <div
+          class="carousel-item"
+          style="background-image: url(../static/assets/img/slide/slide-2.jpg)"
+        >
+          <div class="carousel-container">
+            <div class="carousel-content">
+              <h2 class="animate__animated fanimate__adeInDown">
+                What is Sequence Prediction ?
+              </h2>
+              <p class="animate__animated animate__fadeInUp">
+                Sequence prediction is a popular machine learning task, which
+                consists of predicting the next symbol(s) based on the
+                previously observed sequence of symbols.
+              </p>
+              <a
+                href=""
+                class="btn-get-started animate__animated animate__fadeInUp"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div
+          class="carousel-item"
+          style="background-image: url(../static/assets/img/slide/slide-3.jpg)"
+        >
+          <div class="carousel-container">
+            <div class="carousel-content">
+              <h2 class="animate__animated animate__fadeInDown">
+                CPT Algorithms
+              </h2>
+              <p class="animate__animated animate__fadeInUp">
+                The Compact Prediction Tree (CPT) is an approach published in
+                2015 which aims to match the accuracy and outmatches the
+                performances (time to train and predict) of popular algorithms
+                with a lossless compression of the entire training set
+              </p>
+              <a
+                href=""
+                class="btn-get-started animate__animated animate__fadeInUp"
+                >Read More</a
+              >
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-  
-    <!-- ======= Header ======= -->
-    <header id="header" class="d-flex align-items-center">
-      <div class="container d-flex justify-content-between align-items-center">
-  
-        <div class="logo">
-          <h1><a href="index.html"><img src="https://s.wsj.net/public/resources/images/ON-CJ684_quizgr_B620_20171229134559.jpg" alt="Sequence Prediction" width="150" height="250"></a></h1>
-          <!-- Uncomment below if you prefer to use an image logo -->
-          <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <a
+        class="carousel-control-prev"
+        href="#heroCarousel"
+        role="button"
+        data-bs-slide="prev"
+      >
+        <span
+          class="carousel-control-prev-icon bi bi-chevron-left"
+          aria-hidden="true"
+        ></span>
+      </a>
+
+      <a
+        class="carousel-control-next"
+        href="#heroCarousel"
+        role="button"
+        data-bs-slide="next"
+      >
+        <span
+          class="carousel-control-next-icon bi bi-chevron-right"
+          aria-hidden="true"
+        ></span>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- End Hero -->
+
+<main id="main">
+  <!-- ======= Featured Section ======= -->
+  <section id="featured" class="featured">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="icon-box">
+            <i class="bi bi-card-checklist"></i>
+            <h3><a href="">Sequence</a></h3>
+            <p>
+              A sequence is a list of numbers in a certain order. Each number in
+              a sequence is called a term
+            </p>
+          </div>
         </div>
-  
-        <nav id="navbar" class="navbar">
+        <div class="col-lg-4 mt-4 mt-lg-0">
+          <div class="icon-box">
+            <i class="bi bi-arrow-right-short"></i>
+            <h3><a href="">Prediction</a></h3>
+            <p>an act of saying what will or might happen in the future</p>
+          </div>
+        </div>
+        <div class="col-lg-4 mt-4 mt-lg-0">
+          <div class="icon-box">
+            <i class="bi bi-bar-chart"></i>
+            <h3><a href="">Sequence Prediction</a></h3>
+            <p>
+              Sequence prediction is a popular machine learning task, which
+              consists of predicting the next symbol(s) based on the previously
+              observed sequence of symbols.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Featured Section -->
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <img
+            src="https://docs.datarobot.com/en/docs/images/roc-prediction-graph.png"
+            class="img-fluid"
+            alt=""
+          />
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0 content">
+          <h3>Sequence Prediction</h3>
+          <p class="fst-italic">
+            Sequence-to-sequence prediction involves predicting an output
+            sequence given an input sequence. For example: Given: 1, 2, 3, 4, 5.
+            Predict: 6, 7, 8, 9, 10. ....
+          </p>
           <ul>
-            <li><a class="active" href="index.html">Home</a></li>
-            <li><a href="predict.html">Predict</a></li>
-            <li><a href="home.html">Traing</a></li>
-            <li><a href="search.html">Search</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-              <ul>
-                <li><a href="#">Drop Down 1</a></li>
-                <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                  <ul>
-                    <li><a href="#">Deep Drop Down 1</a></li>
-                    <li><a href="#">Deep Drop Down 2</a></li>
-                    <li><a href="#">Deep Drop Down 3</a></li>
-                    <li><a href="#">Deep Drop Down 4</a></li>
-                    <li><a href="#">Deep Drop Down 5</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Drop Down 2</a></li>
-                <li><a href="#">Drop Down 3</a></li>
-                <li><a href="#">Drop Down 4</a></li>
-              </ul>
+            <li>
+              <i class="bi bi-check-circle"></i>Sequence prediction attempts to
+              predict elements of a sequence on the basis of the preceding
+              elements
             </li>
-            <li><a href="contact.html">Contact</a></li>
+            <li>
+              <i class="bi bi-check-circle"></i>A prediction model is trained
+              with a set of training sequences. Once trained, the model is used
+              to perform sequence predictions. A prediction consists in
+              predicting the next items of a sequence. This task has numerous
+              applications such as web page prefetching, consumer product
+              recommendation, weather forecasting and stock market prediction.
+            </li>
+            <li>
+              <i class="bi bi-check-circle"></i>Learning of sequential data
+              continues to be a fundamental task and a challenge in pattern
+              recognition and machine learning. Applications involving
+              sequential data may require prediction of new events, generation
+              of new sequences, or decision making such as classification of
+              sequences or sub-sequences.
+            </li>
           </ul>
-          <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav><!-- .navbar -->
-  
-      </div>
-    </header><!-- End Header -->
-  
-    <!-- ======= Hero Section ======= -->
-    <section id="hero">
-      <div class="hero-container">
-        <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
-  
-          <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
-  
-          <div class="carousel-inner" role="listbox">
-  
-            <!-- Slide 1 -->
-            <div class="carousel-item active" style="background-image: url(../static/assets/img/slide/slide-1.jpg)">
-              <div class="carousel-container">
-                <div class="carousel-content">
-                  <h2 class="animate__animated animate__fadeInDown"><span>Sequence Prediction</span></h2>
-                  <p class="animate__animated animate__fadeInUp"></p>
-                  <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
-                </div>
-              </div>
-            </div>
-  
-            <!-- Slide 2 -->
-            <div class="carousel-item" style="background-image: url(../static/assets/img/slide/slide-2.jpg)">
-              <div class="carousel-container">
-                <div class="carousel-content">
-                  <h2 class="animate__animated fanimate__adeInDown">What is Sequence Prediction ?</h2>
-                  <p class="animate__animated animate__fadeInUp">Sequence prediction is a popular machine learning task, which consists of predicting the next symbol(s) based on the previously observed sequence of symbols.</p>
-                  <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
-                </div>
-              </div>
-            </div>
-  
-            <!-- Slide 3 -->
-            <div class="carousel-item" style="background-image: url(../static/assets/img/slide/slide-3.jpg)">
-              <div class="carousel-container">
-                <div class="carousel-content">
-                  <h2 class="animate__animated animate__fadeInDown">CPT Algorithms</h2>
-                  <p class="animate__animated animate__fadeInUp">The Compact Prediction Tree (CPT) is an approach published in 2015 which aims to match the accuracy and outmatches the performances (time to train and predict) of popular algorithms with a lossless compression of the entire training set</p>
-                  <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
-                </div>
-              </div>
-            </div>
-  
-          </div>
-  
-          <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-          </a>
-  
-          <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
-            <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-          </a>
-  
+          <p>
+            The Compact Prediction Tree which aims to match the accuracy and
+            outmatches the performances (time to train and predict)
+          </p>
         </div>
       </div>
-    </section><!-- End Hero -->
-  
-    <main id="main">
-  
-      <!-- ======= Featured Section ======= -->
-      <section id="featured" class="featured">
-        <div class="container">
-  
-          <div class="row">
-            <div class="col-lg-4">
-              <div class="icon-box">
-                <i class="bi bi-card-checklist"></i>
-                <h3><a href="">Sequence</a></h3>
-                <p>A sequence is a list of numbers in a certain order. Each number in a sequence is called a term</p>
-              </div>
-            </div>
-            <div class="col-lg-4 mt-4 mt-lg-0">
-              <div class="icon-box">
-                <i class="bi bi-arrow-right-short"></i>
-                <h3><a href="">Prediction</a></h3>
-                <p>an act of saying what will or might happen in the future</p>
-              </div>
-            </div>
-            <div class="col-lg-4 mt-4 mt-lg-0">
-              <div class="icon-box">
-                <i class="bi bi-bar-chart"></i>
-                <h3><a href="">Sequence Prediction</a></h3>
-                <p>Sequence prediction is a popular machine learning task, which consists of predicting the next symbol(s) based on the previously observed sequence of symbols.</p>
-              </div>
-            </div>
+    </div>
+  </section>
+  <!-- End About Section -->
+
+  <!-- ======= Services Section ======= -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bxl-dribbble"></i></div>
+            <h4><a href="">Data</a></h4>
+            <p>
+              Data is defined as facts or figures, or information that's stored
+              in or used by a computer. An example of data is information
+              collected for a research paper
+            </p>
           </div>
-  
         </div>
-      </section><!-- End Featured Section -->
-  
-      <!-- ======= About Section ======= -->
-      <section id="about" class="about">
-        <div class="container">
-  
-          <div class="row">
-            <div class="col-lg-6">
-              <img src="https://docs.datarobot.com/en/docs/images/roc-prediction-graph.png" class="img-fluid" alt="">
-            </div>
-            <div class="col-lg-6 pt-4 pt-lg-0 content">
-              <h3>Sequence Prediction</h3>
-              <p class="fst-italic">
-                Sequence-to-sequence prediction involves predicting an output sequence given an input sequence. For example: Given: 1, 2, 3, 4, 5. Predict: 6, 7, 8, 9, 10.
-....
-              </p>
-              <ul>
-                <li><i class="bi bi-check-circle"></i>Sequence prediction attempts to predict elements of a sequence on the basis of the preceding elements</li>
-                <li><i class="bi bi-check-circle"></i>A prediction model is trained with a set of training sequences. Once trained, the model is used to perform sequence predictions. A prediction consists in predicting the next items of a sequence. This task has numerous applications such as web page prefetching, consumer product recommendation, weather forecasting and stock market prediction. </li>
-                <li><i class="bi bi-check-circle"></i>Learning of sequential data continues to be a fundamental task and a challenge in pattern recognition and machine learning. Applications involving sequential data may require prediction of new events, generation of new sequences, or decision making such as classification of sequences or sub-sequences.</li>
-              </ul>
-              <p>
-                The Compact Prediction Tree  which aims to match the accuracy and outmatches the performances (time to train and predict) 
-              </p>
-            </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-file"></i></div>
+            <h4><a href="">Trained Data</a></h4>
+            <p>
+              Training data is an extremely large dataset that is used to teach
+              a machine learning model. Training data is used to teach
+              prediction models that use machine learning algorithms
+            </p>
           </div>
-  
         </div>
-      </section><!-- End About Section -->
-  
-      <!-- ======= Services Section ======= -->
-      <section id="services" class="services">
-        <div class="container">
-  
-          <div class="row">
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-              <div class="icon-box">
-                <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                <h4><a href="">Data</a></h4>
-                <p>Data is defined as facts or figures, or information that's stored in or used by a computer. An example of data is information collected for a research paper</p>
-              </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-              <div class="icon-box">
-                <div class="icon"><i class="bx bx-file"></i></div>
-                <h4><a href="">Trained Data</a></h4>
-                <p>Training data is an extremely large dataset that is used to teach a machine learning model. Training data is used to teach prediction models that use machine learning algorithms</p>
-              </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-              <div class="icon-box">
-                <div class="icon"><i class="bx bx-tachometer"></i></div>
-                <h4><a href="">Predict</a></h4>
-                <p>Predict analysis is the process of using data analytics to make predictions based on data</p>
-              </div>
-            </div>
-  
-          </div>
-  
-        </div>
-      </section><!-- End Services Section -->
-  
-      <!-- ======= Clients Section ======= -->
-      <section id="clients" class="clients">
-        <div class="container">
-  
-          <div class="section-title">
-            <h2>Clients</h2>
-          </div>
-  
-          <div class="clients-slider swiper">
-            <div class="swiper-wrapper align-items-center">
-              <div class="swiper-slide"><img src="../static/assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="../static/assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="../static/assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="../static/assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="../static/assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="../static/assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="../static/assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="../static/assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-  
-        </div>
-      </section><!-- End Clients Section -->
-  
-    </main><!-- End #main -->
-  
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-  
-      <div class="footer-newsletter">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6">
-              <h4>Our Team</h4>
-              <p>Abhinav Sharma & Lakhan Lal Singh</p>
-            </div>
-            <div class="col-lg-6">
-              <form action="" method="post">
-                <input type="email" name="email"><input type="submit" value="Subscribe">
-              </form>
-            </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-tachometer"></i></div>
+            <h4><a href="">Predict</a></h4>
+            <p>
+              Predict analysis is the process of using data analytics to make
+              predictions based on data
+            </p>
           </div>
         </div>
       </div>
-  
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-  
-            <div class="col-lg-3 col-md-6 footer-links">
-              <h4>Useful Links</h4>
-              <ul>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-              </ul>
-            </div>
-  
-            <div class="col-lg-3 col-md-6 footer-links">
-              <h4>Our Services</h4>
-              <ul>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">Data Services</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">Data Science</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">Django Development</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">Development</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">Recommendation</a></li>
-              </ul>
-            </div>
-  
-            <div class="col-lg-3 col-md-6 footer-contact">
-              <h4>Contact Us</h4>
-              <p>
-                A108 Adam Street <br>
-                New York, NY 535022<br>
-                United States <br><br>
-                <strong>Phone:</strong> +91 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
-              </p>
-  
-            </div>
-  
-            <div class="col-lg-3 col-md-6 footer-info">
-              <h3>About Our Website</h3>
-              <p>Our website provide solution to Data science related services</p>
-              <div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-              </div>
-            </div>
-  
+    </div>
+  </section>
+  <!-- End Services Section -->
+
+  <!-- ======= Clients Section ======= -->
+  <section id="clients" class="clients">
+    <div class="container">
+      <div class="section-title">
+        <h2>Clients</h2>
+      </div>
+
+      <div class="clients-slider swiper">
+        <div class="swiper-wrapper align-items-center">
+          <div class="swiper-slide">
+            <img
+              src="../static/assets/img/clients/client-1.png"
+              class="img-fluid"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="../static/assets/img/clients/client-2.png"
+              class="img-fluid"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="../static/assets/img/clients/client-3.png"
+              class="img-fluid"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="../static/assets/img/clients/client-4.png"
+              class="img-fluid"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="../static/assets/img/clients/client-5.png"
+              class="img-fluid"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="../static/assets/img/clients/client-6.png"
+              class="img-fluid"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="../static/assets/img/clients/client-7.png"
+              class="img-fluid"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="../static/assets/img/clients/client-8.png"
+              class="img-fluid"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+  <!-- End Clients Section -->
+</main>
+<!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+  <div class="footer-newsletter">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h4>Our Team</h4>
+          <p>Abhinav Sharma & Lakhan Lal Singh</p>
+        </div>
+        <div class="col-lg-6">
+          <form action="" method="post">
+            <input type="email" name="email" /><input
+              type="submit"
+              value="Subscribe"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+            <li>
+              <i class="bx bx-chevron-right"></i> <a href="#">About us</a>
+            </li>
+            <li>
+              <i class="bx bx-chevron-right"></i> <a href="#">Services</a>
+            </li>
+            <li>
+              <i class="bx bx-chevron-right"></i>
+              <a href="#">Terms of service</a>
+            </li>
+            <li>
+              <i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li>
+              <i class="bx bx-chevron-right"></i> <a href="#">Data Services</a>
+            </li>
+            <li>
+              <i class="bx bx-chevron-right"></i> <a href="#">Data Science</a>
+            </li>
+            <li>
+              <i class="bx bx-chevron-right"></i>
+              <a href="#">Django Development</a>
+            </li>
+            <li>
+              <i class="bx bx-chevron-right"></i> <a href="#">Development</a>
+            </li>
+            <li>
+              <i class="bx bx-chevron-right"></i> <a href="#">Recommendation</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-contact">
+          <h4>Contact Us</h4>
+          <p>
+            A108 Adam Street <br />
+            New York, NY 535022<br />
+            United States <br /><br />
+            <strong>Phone:</strong> +91 5589 55488 55<br />
+            <strong>Email:</strong> info@example.com<br />
+          </p>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-info">
+          <h3>About Our Website</h3>
+          <p>Our website provide solution to Data science related services</p>
+          <div class="social-links mt-3">
+            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
           </div>
         </div>
       </div>
-  
-      <div class="container">
-        <div class="copyright">
-          &copy; Copyright <strong><span></span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/eterna-free-multipurpose-bootstrap-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
-      </div>
-    </footer><!-- End Footer -->
-  
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright <strong><span></span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/eterna-free-multipurpose-bootstrap-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </div>
+</footer>
+<!-- End Footer -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"
+  ><i class="bi bi-arrow-up-short"></i
+></a>
+
 {% endblock %}

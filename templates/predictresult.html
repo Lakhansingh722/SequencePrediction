@@ -10,17 +10,14 @@
   >
     <div class="card-body">
       <p class="display-2 my-5 text-center fw-bold text-success">
-        Model Successfully Trained!!
+        Prediction Successfull!!
       </p>
-
-      <div class="row justify-content-center">
-        <div class="col-sm-4">
-          <a href="/test" class="btn btn-danger">Test CPT Model</a>
-        </div>
-        <div class="col-sm-4">
-          <a href="" class="btn btn-danger">Predict Sequence using CPT Model</a>
-        </div>
-      </div>
+      <p class="text-muted h3 text-center">Here are the Results</p>
+      <ul class="list-group">
+        {% for item in result %}
+        <li class="list-group-item">{{ item }}</li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
 </div>
