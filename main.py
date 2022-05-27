@@ -16,7 +16,7 @@ def train(CPTmodel):
 def predictSequence(data, target, r, k=5):
     emp = open("model.pkl", "rb")
     model_p = pickle.load(emp)
-    return model_p.predict(data, [[23855, 23933, 24917, 24915, 23714, 23663, 24958, 25135, 25727, 24530]], 5, 3)
+    return model_p.predict(data, [target], k, r)
 
 
 @app.route('/')
