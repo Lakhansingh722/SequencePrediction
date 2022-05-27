@@ -1,0 +1,24 @@
+{% extends 'layout.html' %} {% block body %}
+<div class="container">
+  <div
+    class="card"
+    style="
+      background: linear-gradient(to right, #ffffffbd, #ffffffc7),
+        url(https://miro.medium.com/max/1135/1*cwEeGqeSP5h5MXFm67lD3w.png);
+      padding: 10rem 0;
+    "
+  >
+    <div class="card-body">
+      <p class="display-2 my-5 text-center fw-bold text-success">
+        Prediction Successfull!!
+      </p>
+      <p class="text-muted h3 text-center">Here are the Results</p>
+      <ul class="list-group">
+        {% for item in result[0] %}
+        <li class="list-group-item">{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}
