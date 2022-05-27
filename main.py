@@ -1,4 +1,5 @@
 
+import pickle
 from flask import Flask, render_template, request
 from CPT import *
 model = CPT()
@@ -13,7 +14,9 @@ def train(CPTmodel):
 
 
 def predictSequence(data, target, r, k=5):
-    return model.predict(data, [target], k, r)
+    emp = open("model.pkl", "rb")
+    model_p = pickle.load(emp)
+    return model_p.predict(data, [[23855, 23933, 24917, 24915, 23714, 23663, 24958, 25135, 25727, 24530]], 5, 3)
 
 
 @app.route('/')
@@ -29,6 +32,8 @@ def homepage():
 @app.route('/train')
 def train():
     model.train(data)
+    with open('model.pkl', 'wb') as fh:
+        pickle.dump(model, fh)
     return render_template('trainresult.html')
 
 
@@ -39,7 +44,7 @@ def predictResult():
         seqToPredict = list(map(int, request.form.values()))
         print(seqToPredict)
         result = predictSequence(data, seqToPredict, 3)
-        return render_template('predictersult.html', result=result)
+        return render_template('predictresult.html', result=result)
     return render_template('predict.html')
 
 
