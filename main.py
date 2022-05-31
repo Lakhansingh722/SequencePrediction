@@ -16,7 +16,7 @@ def train(CPTmodel):
 def predictSequence(data, target, r, k=5):
     emp = open("model.pkl", "rb")
     model_p = pickle.load(emp)
-    return model_p.predict(data, [target], k, r)
+    return model_p.predict(data, [[23855, 23933, 24917, 24915, 23714, 23663, 24958, 25135, 25727, 24530]], k, r)
 
 
 @app.route('/')
@@ -44,6 +44,7 @@ def predictResult():
         seqToPredict = list(map(int, request.form.values()))
         print(seqToPredict)
         result = predictSequence(data, seqToPredict, 3)
+        print(result)
         return render_template('predictresult.html', result=result)
     return render_template('predict.html')
 
@@ -63,4 +64,4 @@ def predictSeq(target, num_predictions=1):
 if __name__ == '__main__':
 
     # to run the flask app in the debug mode (app will start automatically)
-    app.run(debug=True)
+    app.run()
