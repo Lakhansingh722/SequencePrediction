@@ -1,4 +1,5 @@
 
+import random
 import pickle
 from flask import Flask, render_template, request
 from CPT import *
@@ -16,7 +17,8 @@ def train(CPTmodel):
 def predictSequence(data, target, r, k=5):
     emp = open("model.pkl", "rb")
     model_p = pickle.load(emp)
-    return model_p.predict(data, [target], k, r)
+    # return model_p.predict(data, [target], k, r)
+    return [[random.randint(min(target), max(target)) for i in range(r)]]
 
 
 @app.route('/')
@@ -41,6 +43,7 @@ def train():
 def predictResult():
     if request.method == 'POST':
         print(request.form)
+        # [i for i in request.form.values() if ]
         seqToPredict = list(map(int, request.form.values()))
         print(seqToPredict)
         result = predictSequence(data, seqToPredict, 3)
