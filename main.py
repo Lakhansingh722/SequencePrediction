@@ -44,6 +44,7 @@ def predictResult():
         seqToPredict = list(map(int, request.form.values()))
         print(seqToPredict)
         result = predictSequence(data, seqToPredict, 3)
+        print(result)
         return render_template('predictresult.html', result=result)
     return render_template('predict.html')
 
@@ -63,4 +64,4 @@ def predictSeq(target, num_predictions=1):
 if __name__ == '__main__':
 
     # to run the flask app in the debug mode (app will start automatically)
-    app.run(debug=True)
+    app.run()
