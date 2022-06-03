@@ -1,4 +1,6 @@
 
+from ctypes import resize
+import numpy as np
 import random
 import pickle
 from flask import Flask, render_template, request
@@ -14,11 +16,23 @@ def train(CPTmodel):
     return CPTmodel.train()
 
 
+def getSeq(inp, num):
+    diff = np.diff(np.array(inp))
+    d = sum(diff)/len(diff)
+    d = round(d)
+    print(np.diff(np.array(inp)))
+    seq = [round(i) for i in np.arange(inp[-1]+d, inp[-1]+(d*num+1), d)]
+    return seq
+
+
 def predictSequence(data, target, r, k=5):
     emp = open("model.pkl", "rb")
     model_p = pickle.load(emp)
     # return model_p.predict(data, [target], k, r)
-    return [[random.randint(min(target), max(target)) for i in range(r)]]
+
+    sq = getSeq(target, r)
+    print(sq)
+    return sq
 
 
 @app.route('/')
@@ -41,15 +55,17 @@ def train():
 
 @app.route('/predict', methods=['GET', 'POST'])
 def predictResult():
+    steps = 5
+    numpred = 3
     if request.method == 'POST':
+
         print(request.form)
-        # [i for i in request.form.values() if ]
-        seqToPredict = list(map(int, request.form.values()))
-        print(seqToPredict)
-        result = predictSequence(data, seqToPredict, 3)
-        print(result)
-        return render_template('predictresult.html', result=result)
-    return render_template('predict.html')
+        sequence = list(map(int, request.form.get('sequence').split()))
+        numpred = int(request.form.get('numpred'))
+        print(sequence)
+        result = getSeq(sequence, numpred)
+        return render_template('predictresult.html', result=result, steps=steps)
+    return render_template('predict.html', steps=steps)
 
 
 @app.route('/test', methods=['GET', 'POST'])
@@ -67,4 +83,4 @@ def predictSeq(target, num_predictions=1):
 if __name__ == '__main__':
 
     # to run the flask app in the debug mode (app will start automatically)
-    app.run()
+    app.run(debug=True)
